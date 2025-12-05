@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import GrammarExercise from '@/components/GrammarExercise';
+import PronunciationPractice from '@/components/PronunciationPractice';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -68,6 +69,7 @@ const Index = () => {
                 { id: 'home', label: 'Главная' },
                 { id: 'grammar', label: 'Грамматика' },
                 { id: 'exercises', label: 'Упражнения' },
+                { id: 'pronunciation', label: 'Произношение' },
                 { id: 'vocabulary', label: 'Словарь' },
                 { id: 'culture', label: 'О культуре' },
                 { id: 'videos', label: 'Видео-уроки' },
@@ -195,6 +197,22 @@ const Index = () => {
             </p>
           </div>
           <GrammarExercise />
+        </div>
+      </section>
+
+      <section id="pronunciation" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-pink-100 px-4 py-2 rounded-full mb-4">
+              <Icon name="Volume2" size={20} className="text-pink-600" />
+              <span className="text-pink-700 font-semibold">Произношение</span>
+            </div>
+            <h3 className="text-4xl font-bold mb-4">Тренировка произношения</h3>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Слушайте и повторяйте русские слова с правильным произношением
+            </p>
+          </div>
+          <PronunciationPractice />
         </div>
       </section>
 
